@@ -1,7 +1,9 @@
 #include <ezBuzzer.h>  // Library for a passive buzzer
 #include <Keypad.h>    // Library for keypad
+#include <stdint.h>    // Library to play tone
 #include "pitches.h"   //
 
+#define buzzerPin 11
 /*..................................... Keypad_Setup .............................................*/
 //Defining the number of rows and columns of the keypad
 const byte ROWS = 4;
@@ -22,22 +24,14 @@ byte colPins[COLS] = { 5, 4, 3, 2 };
 //creates an object
 Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
 
-/*..................................... Buzer_Setup .............................................*/
-const int buzzerPin = 11;
-/*...................................playMelody_Function.........................................*/
-void playMelody(int *melody, int *noteDurations, int length) {
-  for (int x = 0; x < length; x++) {  // Controls how many time the function loops once initiated. create integer x, assigns 0 x, checks if x is less tan the length before increasing by 1
-    tone(buzzerPin, melody[x], noteDurations[x]);
-    delay(noteDurations[x] * 0.5);  //Gives time between each tone otherwise you just hear a bip
-    noTone(buzzerPin);              // stops
-  }
-}
 /*........................................ Melody A .............................................*/
-void MelodyA() {
-  int notes[] = { NOTE_C4, NOTE_D4, NOTE_F5 };
-  int durA[] = { 400, 400, 400 };
-  playMelody(notes, durA, 3);
+void melodyA() {
+  
+ int melody[4] = { NOTE_C3, NOTE_C4, NOTE_C5, NOTE_C6 };
+ int durations[4] = { 100, 40, 60, 200 };
 }
+
+/*........................................ Melody B .............................................*/
 
 //Runs once
 void setup() {
@@ -53,6 +47,39 @@ void loop() {
     Serial.print("Key pressed: ");
     Serial.println(key);
   }
-  
-  if (key == 'A') MelodyA();
+  if (key == 'A') {
+    melodyA();
+  }
+  switch (key) {
+    case '1':
+      tone(buzzerPin, NOTE_A4, 40);
+      break;
+    case '2':
+      tone(buzzerPin, NOTE_B4, 40);
+      break;
+    case '3':
+      tone(buzzerPin, NOTE_C4, 40);
+      break;
+    case '4':
+      tone(buzzerPin, NOTE_D4, 40);
+      break;
+    case '5':
+      tone(buzzerPin, NOTE_E4, 40);
+      break;
+    case '6':
+      tone(buzzerPin, NOTE_F4, 40);
+      break;
+    case '7':
+      tone(buzzerPin, NOTE_G4, 40);
+      break;
+    case '8':
+      tone(buzzerPin, NOTE_A5, 40);
+      break;
+    case '9':
+      tone(buzzerPin, NOTE_B5, 40);
+      break;
+    case '0':
+      tone(buzzerPin, NOTE_C5, 40);
+      break;
+  }
 }

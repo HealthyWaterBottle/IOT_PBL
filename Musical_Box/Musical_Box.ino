@@ -1,7 +1,7 @@
-#include <ezBuzzer.h>  // Library for a passive buzzer
-#include <Keypad.h>    // Library for keypad
-#include <stdint.h>    // Library to play tone
-#include "pitches.h"   //
+#include <Keypad.h>   // Library for keypad
+#include "pitches.h"  // File containing the tones
+#include "Mario.h"    // File containing the tones
+#include "Pirates_of_the_Caribbeans.h"
 
 #define buzzerPin 11
 /*..................................... Keypad_Setup .............................................*/
@@ -21,25 +21,17 @@ char keys[ROWS][COLS] = {
 byte rowPins[ROWS] = { 9, 8, 7, 6 };
 byte colPins[COLS] = { 5, 4, 3, 2 };
 
-//creates an object
-Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);
+/*.................................... Creating Object .........................................*/
+Keypad customKeypad = Keypad(makeKeymap(keys), rowPins, colPins, ROWS, COLS);  //Keypad Object
 
-/*........................................ Melody A .............................................*/
-void melodyA() {
-  
- int melody[4] = { NOTE_C3, NOTE_C4, NOTE_C5, NOTE_C6 };
- int durations[4] = { 100, 40, 60, 200 };
-}
-
-/*........................................ Melody B .............................................*/
-
-//Runs once
+/*........................................ Runs once ............................................*/
 void setup() {
   pinMode(buzzerPin, OUTPUT);    //buzzer pin definition
   Serial.begin(9600);            //Start the Serial Monitor
   tone(buzzerPin, NOTE_A5, 40);  // 40 ms of tone to check if the buzzer is functional
 }
-//Main logic
+
+/*....................................... Main logic ............................................*/
 void loop() {
   char key = customKeypad.getKey();
 
@@ -50,36 +42,19 @@ void loop() {
   if (key == 'A') {
     melodyA();
   }
-  switch (key) {
-    case '1':
-      tone(buzzerPin, NOTE_A4, 40);
-      break;
-    case '2':
-      tone(buzzerPin, NOTE_B4, 40);
-      break;
-    case '3':
-      tone(buzzerPin, NOTE_C4, 40);
-      break;
-    case '4':
-      tone(buzzerPin, NOTE_D4, 40);
-      break;
-    case '5':
-      tone(buzzerPin, NOTE_E4, 40);
-      break;
-    case '6':
-      tone(buzzerPin, NOTE_F4, 40);
-      break;
-    case '7':
-      tone(buzzerPin, NOTE_G4, 40);
-      break;
-    case '8':
-      tone(buzzerPin, NOTE_A5, 40);
-      break;
-    case '9':
-      tone(buzzerPin, NOTE_B5, 40);
-      break;
-    case '0':
-      tone(buzzerPin, NOTE_C5, 40);
-      break;
+  if (key == 'B') {
+    melodyB();
+    }
+    switch (key) {
+      case '1': tone(buzzerPin, NOTE_A4, 40); break;
+      case '2': tone(buzzerPin, NOTE_B4, 40); break;
+      case '3': tone(buzzerPin, NOTE_C4, 40); break;
+      case '4': tone(buzzerPin, NOTE_D4, 40); break;
+      case '5': tone(buzzerPin, NOTE_E4, 40); break;
+      case '6': tone(buzzerPin, NOTE_F4, 40); break;
+      case '7': tone(buzzerPin, NOTE_G4, 40); break;
+      case '8': tone(buzzerPin, NOTE_A5, 40); break;
+      case '9': tone(buzzerPin, NOTE_B5, 40); break;
+      case '0': tone(buzzerPin, NOTE_C5, 40); break;
+    }
   }
-}

@@ -33,28 +33,48 @@ void setup() {
 
 /*....................................... Main logic ............................................*/
 void loop() {
-  char key = customKeypad.getKey();
+  char key = customKeypad.getKey();  // Variable to store the key pressed
 
   if (key) {
-    Serial.print("Key pressed: ");
-    Serial.println(key);
+    Serial.print("Key pressed: ");  // Prints on the serial monitor Key pressed:
+    Serial.println(key);            // prints on the serial monitor the key pressed. eg. 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, #, *
   }
   if (key == 'A') {
-    melodyA();
+    melodyA();  // Plays melodyA inside of the Mario.h tab
   }
   if (key == 'B') {
-    melodyB();
-    }
-    switch (key) {
-      case '1': tone(buzzerPin, NOTE_A4, 40); break;
-      case '2': tone(buzzerPin, NOTE_B4, 40); break;
-      case '3': tone(buzzerPin, NOTE_C4, 40); break;
-      case '4': tone(buzzerPin, NOTE_D4, 40); break;
-      case '5': tone(buzzerPin, NOTE_E4, 40); break;
-      case '6': tone(buzzerPin, NOTE_F4, 40); break;
-      case '7': tone(buzzerPin, NOTE_G4, 40); break;
-      case '8': tone(buzzerPin, NOTE_A5, 40); break;
-      case '9': tone(buzzerPin, NOTE_B5, 40); break;
-      case '0': tone(buzzerPin, NOTE_C5, 40); break;
-    }
+    melodyB();  //Plays melodyB inside of the Pirates_of_the_Caribbeans.h tab
   }
+  switch (key) {
+    case '0':  // Plays C4 for 40ms when 0 is pressed
+      tone(buzzerPin, NOTE_C5, 40);
+      break;
+    case '1':  // Plays A4 for 40ms when 1 is pressed
+      tone(buzzerPin, NOTE_A4, 40);
+      break;
+    case '2':  // Plays B4 for 40ms when 2 is pressed
+      tone(buzzerPin, NOTE_B4, 40);
+      break;
+    case '3':  // Plays C4 for 40ms when 3 is pressed
+      tone(buzzerPin, NOTE_C4, 40);
+      break;
+    case '4':  // Plays D4 for 40ms when 4 is pressed
+      tone(buzzerPin, NOTE_D4, 40);
+      break;
+    case '5':  // Plays E4 for 40ms when 5 is pressed
+      tone(buzzerPin, NOTE_E4, 40);
+      break;
+    case '6':  // Plays F4 for 40ms when 6 is pressed
+      tone(buzzerPin, NOTE_F4, 40);
+      break;
+    case '7':  // Plays G4 for 40ms when 7 is pressed
+      tone(buzzerPin, NOTE_G4, 40);
+      break;
+    case '8':  // Plays A4 for 40ms when 8 is pressed
+      tone(buzzerPin, NOTE_A5, 40);
+      break;
+    case '9':  // Plays B4 for 40ms when 9 is pressed
+      tone(buzzerPin, NOTE_B5, 40);
+      break;
+  }
+}

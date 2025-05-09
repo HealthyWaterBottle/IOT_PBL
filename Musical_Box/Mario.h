@@ -1,12 +1,12 @@
 #define buzzerPin 11
 
-int d1 = 25;    
-int d2 = 125;  
+int d1 = 25;
+int d2 = 125;
 
 void melodyA() {
-  tone(buzzerPin, NOTE_E5, d2);
-  delay(d2);
-  noTone(buzzerPin);
+  tone(buzzerPin, NOTE_E5, d2); 
+  delay(d2); 
+  noTone(buzzerPin); 
   delay(d1);
 
   tone(buzzerPin, NOTE_E5, d2);

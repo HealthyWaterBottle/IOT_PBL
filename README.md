@@ -1,4 +1,4 @@
-# PBL-Intro2IoT
+# IOT_PBL
 This document describes a Project-Based Learning (PBL) activity for the Introduction to IoT course offered by Dawson College’s Electrical Engineering Technology Department.
 
 # 🎶  Musical Box

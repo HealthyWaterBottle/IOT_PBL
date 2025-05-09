@@ -1,12 +1,13 @@
 # PBL-Intro2IoT
 This document describes a Project-Based Learning (PBL) activity for the Introduction to IoT course offered by Dawson College’s Electrical Engineering Technology Department.
 
-# 🐾 Musical Box
+#  Musical Box
 
 > A quick, Arduino‐based IoT project that plays a tone when a number is pressed or plays a melody when a letter is pressed on the keypad.
 <p align="center">
-  <img src="Musical_Box/Musical_Box_Diagram.png" width="480" alt="Musical box project diagram">
+ ![Musical_Box_Circuit_Diagram](https://github.com/user-attachments/assets/fd3d95ef-38c7-44d4-82da-2220c0cc3f25)
 </p>
+
 
 ---
 
@@ -33,5 +34,5 @@ This document describes a Project-Based Learning (PBL) activity for the Introduc
 ## 🔌 Circuit
 
 <p align="center">
-  <img src="Musical_Box/Musical_Box_Circuit_Diagram.png" width="480" alt="Musical Box prototype on breadboard">
+ ![Musical_Box_diagram](https://github.com/user-attachments/assets/60183ec3-cb0e-48f1-9c9f-572ed7ce9ca6)
 </p>

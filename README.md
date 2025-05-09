@@ -5,9 +5,7 @@ This document describes a Project-Based Learning (PBL) activity for the Introduc
 
 > A quick, Arduino‐based IoT project that plays a tone when a number is pressed or plays a melody when a letter is pressed on the keypad.
 <p align="center">
-<img width="420" alt="Musical Box Diagram" src="https://github.com/HealthyWaterBottle/IOT_PBL/blob/main/Musical_Box/Musical_Box_Circuit_Diagram.png?raw=true"
-
-
+<img width="420" alt="Musical Box Diagram" src="https://github.com/HealthyWaterBottle/IOT_PBL/blob/main/Musical_Box/Musical_Box_diagram.png?raw=true">
 </p>
 
 ---
@@ -35,5 +33,5 @@ This document describes a Project-Based Learning (PBL) activity for the Introduc
 ## 🔌 Circuit
 
 <p align="center">
- ![Alt text](./Musical_Box/Musical_Box_Circuit_Diagram.png?raw=true "Title")
+ <img width="420" alt="Musical Box Circuit Diagram" src="https://github.com/HealthyWaterBottle/IOT_PBL/blob/main/Musical_Box/Musical_Box_Circuit_Diagram.png?raw=true">
 </p>

@@ -5,11 +5,17 @@ int d2 = 125;
 
 /*..................................... melodyA .............................................*/
 void melodyA() {
+
   tone(buzzerPin, NOTE_E5, d2);  // plays a tone for a given amount of time
   delay(d2);                     // delay it isolates the tone
   noTone(buzzerPin);             // no tone
   delay(d1);                     // delay isolates the tone more
                                  // repeat for every tone of the melody
+  tone(buzzerPin, NOTE_E5, d2); 
+  delay(d2); 
+  noTone(buzzerPin); 
+  delay(d1);
+
   tone(buzzerPin, NOTE_E5, d2);
   delay(d2);
   noTone(buzzerPin);

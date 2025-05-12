@@ -39,10 +39,10 @@ void loop() {
     Serial.print("Key pressed: ");
     Serial.println(key);
   }
-  if (key == 'A') { // When A is presssed on the keypad, plays melodyA
+  if (key == 'A') {  // When A is presssed on the keypad, plays melodyA
     melodyA();
   }
-  if (key == 'B') { // When B is presssed on the keypad, plays melodyB
+  if (key == 'B') {  // When B is presssed on the keypad, plays melodyB
     melodyB();
   }
   switch (key) {
